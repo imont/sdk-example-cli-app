@@ -1,4 +1,7 @@
+libs/*
 .idea
 .java-version
 .gradle
 build
+sqlite.db
+state.yaml
