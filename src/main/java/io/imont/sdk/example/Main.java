@@ -7,19 +7,40 @@ package io.imont.sdk.example;
 import io.imont.ferret.client.config.FerretConfiguration;
 import io.imont.lion.Lion;
 import io.imont.lion.LionBuilder;
+import io.imont.lion.drivers.DriverSpec;
+import io.imont.sdk.example.hardware.ExampleOSHardwareLayer;
 
-import java.nio.file.Files;
-import java.nio.file.attribute.FileAttribute;
+import java.io.File;
 
 public class Main {
 
+    public static final String WORK_DIR = ".";
+
+    private static final String[] DEVICES = new String[] {
+            "drivers/test-native-os-device.js",
+            "drivers/test-bridged-device.js"
+    };
+
     public static void main(String[] args) throws Exception {
+        boolean firstStart = !new File(WORK_DIR, "state.yaml").exists();
         Lion lion = new LionBuilder()
                 .ferretConfiguration(getConfiguration())
-                .workDir(Files.createTempDirectory("liontemp", new FileAttribute[] {}).toString())
+                //.workDir(Files.createTempDirectory("liontemp", new FileAttribute[] {}).toString())
+                .workDir(WORK_DIR) // current directory
                 .build();
 
+        for (String device : DEVICES) {
+            lion.getDriverManager().registerDriver(Main.class.getClassLoader().getResource(device));
+        }
+
+        lion.registerNetwork("os", new ExampleOSHardwareLayer());
+
         lion.start();
+
+        if (firstStart) {
+            lion.registerDevice(lion.getMole().getLocalPeerId(), new DriverSpec("OS", "OS", "OS", "1"));
+            lion.registerDevice("TEST:DEVICE:ID", new DriverSpec("Test", "Test", "Test Device", "1"));
+        }
     }
 
     private static FerretConfiguration getConfiguration() {
