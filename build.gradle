@@ -2,6 +2,10 @@ group 'io.imont.sdk'
 version '0.1-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "io.imont.sdk.example.Main"
+applicationDefaultJvmArgs = ["-Dlogback.configurationFile=MY_APP_HOME/config/logback.xml"]
 
 sourceCompatibility = 1.7
 

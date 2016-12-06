@@ -13,5 +13,11 @@ Don't forget to place the .jar with the IMONT SDK into the libs/ folder (adjust 
 3. Register a new device `lion.registerDevice("your:device:id", new DriverSpec("$network", "$manufacturer", "$model", "$hwVersion"));`
 4. Voila!
 
+## Using the app
 
+1. `./gradlew clean build`
+2. Go to `build/distributions`
+3. Unzip or untar the generated archive
+4. Go to created folder
+4. `./bin/sdk-example-cli-app`
 

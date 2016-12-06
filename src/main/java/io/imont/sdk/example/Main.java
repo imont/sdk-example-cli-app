@@ -49,7 +49,7 @@ public class Main {
         fc.setFriendlyName("My app");
         fc.setType("CLI");
         fc.setRendezvousHost("r.imont.tech");
-        fc.setRendezvousPort(5555);
+        fc.setRendezvousPort(4444);
         return fc;
     }
 }
