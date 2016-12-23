@@ -18,7 +18,8 @@ public class Main {
 
     private static final String[] DEVICES = new String[] {
             "drivers/test-native-os-device.js",
-            "drivers/test-bridged-device.js"
+            "drivers/test-bridged-device.js",
+            "drivers/test-input-device.js"
     };
 
     public static void main(String[] args) throws Exception {
@@ -40,6 +41,7 @@ public class Main {
         if (firstStart) {
             lion.registerDevice(lion.getMole().getLocalPeerId(), new DriverSpec("OS", "OS", "OS", "1"));
             lion.registerDevice("TEST:DEVICE:ID", new DriverSpec("Test", "Test", "Test Device", "1"));
+            lion.registerDevice("TEST:INPUT-DEVICE:ID", new DriverSpec("Test", "Imont", "Test Input Device", "1"));
         }
     }
 
