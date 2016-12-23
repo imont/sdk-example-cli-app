@@ -31,7 +31,8 @@ function reportStatus() {
         "STATUS_EVENT",
         "DEVICE_STATUS",
         {
-            'OS_UPTIME': "" + framework.os.getOSUptime()
+            'OS_UPTIME': "" + framework.os.getOSUptime(),
+            'FAKE': framework.os.fake()
         }
     );
 }

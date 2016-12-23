@@ -4,12 +4,12 @@
  */
 package io.imont.sdk.example.hardware;
 
-import io.imont.network.FoundDevice;
+import io.imont.network.AbstractNetworkLayer;
+import io.imont.network.DeviceCandidate;
 import io.imont.network.NetworkEvent;
-import io.imont.network.NetworkLayer;
 import rx.Observable;
 
-public class ExampleOSHardwareLayer implements NetworkLayer {
+public class ExampleOSHardwareLayer extends AbstractNetworkLayer {
 
     @Override
     public Object getPublicInterface() {
@@ -22,7 +22,7 @@ public class ExampleOSHardwareLayer implements NetworkLayer {
     }
 
     @Override
-    public Observable<FoundDevice> discover() {
+    public Observable<DeviceCandidate> discover() {
         return Observable.empty();
     }
 

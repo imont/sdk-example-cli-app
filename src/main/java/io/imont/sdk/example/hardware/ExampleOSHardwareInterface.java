@@ -15,4 +15,8 @@ public class ExampleOSHardwareInterface {
     public long getOSUptime() {
         return ManagementFactory.getRuntimeMXBean().getUptime();
     }
+
+    public String fake() {
+        return "I AM FAKE";
+    }
 }
