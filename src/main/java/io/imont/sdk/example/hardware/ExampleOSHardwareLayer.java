@@ -4,9 +4,9 @@
  */
 package io.imont.sdk.example.hardware;
 
-import io.imont.network.AbstractNetworkLayer;
-import io.imont.network.DeviceCandidate;
-import io.imont.network.NetworkEvent;
+import io.imont.lion.network.AbstractNetworkLayer;
+import io.imont.lion.network.DeviceCandidate;
+import io.imont.lion.network.NetworkEvent;
 import rx.Observable;
 
 public class ExampleOSHardwareLayer extends AbstractNetworkLayer {

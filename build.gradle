@@ -11,16 +11,23 @@ sourceCompatibility = 1.7
 
 repositories {
     mavenCentral()
-    flatDir {
-        dirs 'libs'
+    repositories {
+        // your other repos
+        maven {
+            credentials {
+                username imontRepoUser
+                password imontRepoPassword
+            }
+            url "https://repo.imont.io/repository/imont-public/"
+        }
     }
 }
 
 dependencies {
     compile files('libs/imont-sdk-0.1-SNAPSHOT.jar')
+    compile 'io.imont.lion:lion-client:0.1-alpha'
+    compile 'io.imont.lion:lion-client:0.1-alpha'
 
-    compile 'org.bouncycastle:bcprov-jdk15on:1.54'
-    compile 'org.bouncycastle:bcpkix-jdk15on:1.54'
     compile 'org.xerial:sqlite-jdbc:3.15.1'
     compile 'ch.qos.logback:logback-classic:1.1.7'
 }
