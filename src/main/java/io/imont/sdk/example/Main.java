@@ -16,7 +16,7 @@ public class Main {
 
     public static final String WORK_DIR = ".";
 
-    private static final String[] DEVICES = new String[] {
+    private static final String[] DRIVERS = new String[] {
             "drivers/test-native-os-device.js",
             "drivers/test-bridged-device.js",
             "drivers/test-input-device.js"
@@ -26,12 +26,11 @@ public class Main {
         boolean firstStart = !new File(WORK_DIR, "state.yaml").exists();
         Lion lion = new LionBuilder()
                 .ferretConfiguration(getConfiguration())
-                //.workDir(Files.createTempDirectory("liontemp", new FileAttribute[] {}).toString())
                 .workDir(WORK_DIR) // current directory
                 .build();
 
-        for (String device : DEVICES) {
-            lion.getDriverManager().registerDriver(Main.class.getClassLoader().getResource(device));
+        for (String driver : DRIVERS) {
+            lion.getDriverManager().registerDriver(Main.class.getClassLoader().getResource(driver));
         }
 
         lion.registerNetwork("os", new ExampleOSHardwareLayer());
