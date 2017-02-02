@@ -4,7 +4,7 @@ A simple app that instantiates the IMONT SDK and a couple of fake devices, to de
 
 ## Before you start
 
-Don't forget to place the .jar with the IMONT SDK into the libs/ folder (adjust the path in build.gradle accordingly)
+Don't forget to register for SDK access at https://sdk.imont.io, and configure gradle accordingly.
 
 ## Writing a driver:
 
