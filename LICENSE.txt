@@ -25,17 +25,19 @@ Version of the SDK is bound to an Application Name and is built for each
 application individually.
 
 3.	RESTRICTIONS. You shall not, directly or indirectly (or allow any third
-party to): use the SDK to create (or facilitate the creation of) any product or
-service that is competitive (in any way) with the SDK; rent or lease the SDK;
-use the SDK for timesharing or service bureau purposes, or otherwise for the
-benefit of third parties; use the SDK for performing comparisons or other
-"benchmarking" activities, either alone or in connection with any software (and
-You will not publish any such performance information or comparisons); use the
-SDK except as expressly licensed above; or remove or alter or obscure any
-proprietary notices from the SDK. Further, if Imont Technologies Limited makes
-available and You use the SDK in compiled form, You shall not decompile,
-reverse engineer, modify or create derivative works of the SDK (including the
-runtime components and any other portions thereof).
+party to): reverse engineer, decompile, disassemble or otherwise by any means
+attempt to access or ascertain the source code of the SDK; alter, modify,
+extend, or create derivative works of the SDK; attempt to circumvent any time
+limit deactivation feature of the SDK;  make copies of the SDK not expressly
+authorized by Imont Technologies Limited; transfer, assign, sell, display or
+distribute the SDK; use the SDK to create (or facilitate the creation of) any
+product or service that is competitive (in any way) with the SDK; rent or lease
+the SDK; use the SDK for timesharing or service bureau purposes, or otherwise
+for the benefit of third parties; use the SDK except as expressly licensed
+above; remove or alter or obscure any proprietary notices from the SDK; use the
+SDK for any reason other than to evaluate its capabilities and features in
+consideration of a possible future commercial license from Imont Technologies
+Limited.
 
 4.	OWNERSHIP; FEEDBACK. As between the parties, title, ownership rights,
 and intellectual property rights in and to the SDK, and any copies or portions
