@@ -1,17 +1,12 @@
 # IMONT SDK Example CLI Application
 
-A simple app that instantiates the IMONT SDK and a couple of fake devices, to demonstrate the various features available.
+A simple app that instantiates the IMONT SDK with the Bluetooth module and allows connecting a TI CC2650 Sensor Tag.
 
 ## Before you start
 
+The CLI app will assume to be running in an armhf environment (i.e. a Raspberry Pi), Bluetooth capabilities will not work elsewhere.
+
 Don't forget to register for SDK access at https://sdk.imont.io, and configure gradle accordingly.
-
-## Writing a driver:
-
-1. Create a new js file in `src/main/resources` (take inspiration from the ones already available)
-2. Register it with Lion, i.e.: `lion.getDriverManager().registerDriver(Main.class.getClassLoader().getResource("drivers/my-driver.js"))` (make sure you do this before `start()` is invoked)
-3. Register a new device `lion.registerDevice("your:device:id", new DriverSpec("$network", "$manufacturer", "$model", "$hwVersion"));`
-4. Voila!
 
 ## Using the app
 
