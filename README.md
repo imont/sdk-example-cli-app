@@ -1,4 +1,5 @@
-## IMONT SDK Example CLI Application
+IMONT SDK Example CLI Application
+=====
 
 A simple app that instantiates the IMONT SDK with the Bluetooth module and allows connecting a TI CC2650 Sensor Tag.
 
