@@ -7,6 +7,13 @@ apply plugin: 'application'
 mainClassName = "io.imont.sdk.example.Main"
 applicationDefaultJvmArgs = ["-Dlogback.configurationFile=MY_APP_HOME/config/logback.xml"]
 
+startScripts {
+    doLast {
+        unixScript.text = unixScript.text.replace('MY_APP_HOME', '\$APP_HOME')
+        unixScript.text = unixScript.text.replace('PRG="$0"', 'PRG="$0" \n\nexport LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/tmp"')
+    }
+}
+
 sourceCompatibility = 1.8
 
 repositories {
