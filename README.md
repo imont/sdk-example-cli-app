@@ -17,3 +17,6 @@ Don't forget to register for SDK access at https://sdk.imont.io, and configure g
 4. Go to created folder
 4. `./bin/sdk-example-cli-app`
 
+## License
+
+Evaluation license available in LICENSE.txt
